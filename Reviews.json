@@ -1,0 +1,27 @@
+ [
+    {
+      "ReviewID": "f2f2c7e5-764b-4f76-9d59-3e2f9e19d128",
+      "BookingID": 101,
+      "Review": "Great service, very satisfied!"
+    },
+    {
+      "ReviewID": "bf9b7d61-a504-4d2b-90d4-3617dbfa24d1",
+      "BookingID": 102,
+      "Review": "Asmaa is a good listener, I got better with her."
+    },
+    {
+      "ReviewID": "3a8e4737-1d08-4964-b92a-7f21e61a06d0",
+      "BookingID": 103,
+      "Review": "Excellent! Will book again."
+    },
+    {
+      "ReviewID": "48f44cc2-e14a-4261-9e26-fcfb26eab9f2",
+      "BookingID": 104,
+      "Review": "More that what I expected,Thank You Asmaa."
+    },
+    {
+      "ReviewID": "d5bfc3c3-33d8-4b06-bb5e-8ebdf63cf962",
+      "BookingID": 105,
+      "Review": "Smooth and easy process."
+    }
+  ]

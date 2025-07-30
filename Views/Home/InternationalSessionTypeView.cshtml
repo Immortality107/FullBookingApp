@@ -74,8 +74,7 @@
 </style>
 
 <div class="session-container container">
-    <h1 class="session-title">🌸 Choose Your Session Type</h1>
-
+    <h1 class="session-title">@ViewData["Title"]</h1>
         <!-- Video Call Session -->
         <div class="col-md-6">
             <div class="session-card">
@@ -85,8 +84,8 @@
                         <p class="session-description">
                             Duration : 1 hour <br />
                             Location : Google Meet Application <br />
-                            Fees : 170$ - Per Session  <br />
-                            OR 520$ For Monthly Package - 4 Sessions <br />
+                        Fees : @ViewBag.PrivateSessionPrice - Per Session  <br />
+                        OR @ViewBag.MonthlyPackagePrice For Monthly Package - 4 Sessions <br />
                             Session Within 1 Week From Booking Or Emergency Sessions Within 24 Hours. <br />
                             Notes : You Receive Session Link Before Appointment  <br />
                             Morning Hours : 9-2pm<br />
@@ -96,8 +95,8 @@
                     <img src="~/PrivateSessions.jpg" alt="Video Call Session" class="session-image" />
                 </div>
                 <div class="mt-3">
-                    <a href="#" onclick="showLocationPopup()" class="btn-session">Book One Session</a>
-                    <a href="#" onclick="showLocationPopup()" class="btn-session">Book Monthly Package</a>
+                <a href="@Url.Action("ChoosePayment", "SupportCircle", new { price="170$" })" class="btn-session">Book One Session</a>
+                <a href=" @Url.Action("ChoosePayment", "SupportCircle", new { price="520$" })" class="btn-session">Book Monthly Package</a>
                 </div>
             </div>
         </div>

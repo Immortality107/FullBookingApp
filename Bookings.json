@@ -1,0 +1,29 @@
+
+  [
+    {
+      "BookingId": "d2e84756-7743-4265-a40f-bac354fe0f31",
+      "ClientID": "485621B3-2A44-4D22-A870-EE9CC3F22326",
+      "PaymentID": "2EBDC7A1-1398-48F1-940D-C4022ACCE082",
+      "ServiceID": "756D3B5A-A2A2-426C-B9B6-7F8552C64BB4",
+      "Amount": 2000,
+      "Status": "Completed"
+    },
+    {
+      "BookingId": "1a3e69e4-7ec9-48ff-8713-3a0c5d48702c",
+      "ClientID": "485621B3-2A44-4D22-A870-EE9CC3F22326",
+      "PaymentID": "2EBDC7A1-1398-48F1-940D-C4022ACCE082",
+      "ServiceID": "756D3B5A-A2A2-426C-B9B6-7F8552C64BB4",
+      "Amount": 200,
+      "Status": "Waiting"
+    },
+    {
+      "BookingId": "627bb73e-8232-466f-b348-799b7bcd9b01",
+      "ClientID": "485621B3-2A44-4D22-A870-EE9CC3F22326",
+      "PaymentID": "2EBDC7A1-1398-48F1-940D-C4022ACCE082",
+      "ServiceID": "756D3B5A-A2A2-426C-B9B6-7F8552C64BB4",
+      "Amount": 50,
+      "Status": "Cancelled"
+    }
+  ]
+
+

@@ -1,0 +1,152 @@
+﻿@{
+    ViewData["Title"] = "MoneyFlow Circle";
+}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #fdf6f9;
+        color: #333;
+        padding-bottom: 50px;
+    }
+
+    .about-header {
+        background-color: #ffe4ec;
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+        .about-header h1 {
+            font-size: 2.8rem;
+            color: #aa336a;
+            font-weight: 600;
+        }
+
+    .about-content {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 0 20px;
+        line-height: 1.8;
+    }
+
+        .about-content p {
+            background-color: #fff3f7;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(217, 108, 156, 0.1);
+            font-size: 1.05rem;
+            color: #444;
+        }
+
+    .about-image {
+        width: 100%;
+        border-radius: 20px;
+        margin: 30px 0;
+        height: auto;
+        max-height: 400px;
+        object-fit: cover;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .btn-session {
+        background-color: #d96c9c;
+        color: white;
+        border-radius: 25px;
+        padding: 12px 28px;
+        font-size: 1.1rem;
+        margin-top: 20px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        display: inline-block;
+    }
+
+        .btn-session:hover {
+            background-color: #b24c7d;
+            color: white;
+        }
+
+    .glow-wrapper {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    @@keyframes glow {
+        0% {
+            box-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4, 0 0 15px #ff69b4;
+        }
+
+        50% {
+            box-shadow: 0 0 10px #ff69b4, 0 0 30px #ff69b4, 0 0 20px #ff69b4;
+        }
+
+        100% {
+            box-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4, 0 0 15px #ff69b4;
+        }
+    }
+
+    .btn-glow {
+        background-color: #ff69b4;
+        border: none;
+        padding: 12px 30px;
+        font-weight: bold;
+        border-radius: 25px;
+        text-decoration: none;
+        animation: glow 1.5s infinite ease-in-out;
+        color: white !important;
+        font-size: 1.1rem;
+        box-shadow: 0 0 10px #ff69b4;
+    }
+
+        .btn-glow:hover {
+            color: orangered !important;
+            background-color: #ff80bf;
+        }
+</style>
+
+<div class="about-header">
+    <h1>دايرة الوفرة المالية 🌸</h1>
+</div>
+
+<div class="about-content">
+    <p>
+        هل علاقتك بالمال مليانة قلق؟ هل بتحسي إن الفلوس بتخلص أول ما توصلك؟<br /><br />
+
+        دايرة "الوفرة المالية" هي مساحة دعم نفسي للسيدات لتصحيح علاقتنا بالمال من الجذور النفسية.<br /><br />
+
+        ✨ لو بتعدي بالحالات دي:<br />
+        - بتحسي بعدم أمان مالي<br />
+        - بتصرفي بسرعة أو مش بتعرفي تحوشي<br />
+        - بتخافي من المستقبل أو من الغلاء<br />
+        - بتحسي بالذنب لما تشتري لنفسك حاجات<br />
+        - مستفزة من حياة الرفاهية ومش عارفة توصليها<br /><br />
+
+        💰 مع ليليم سيركل، بنخوض رحلة متكاملة:<br />
+        - ٣ جلسات تأسيسية تفاعلية (٣ ساعات لكل جلسة)<br />
+        - لقاء شهري بالفيديو كول مع سيدات شبهك<br />
+        - تمارين عملية، مشاركات حقيقية، توعية مالية أنثوية<br /><br />
+
+        🧠 في الرحلة دي، هنتعلم:<br />
+        - نراجع علاقتنا بالمال ونفهم جذورها<br />
+        - نكسر أنماط الصرف والحرمان القديمة<br />
+        - نعيد برمجة تفكيرنا من الفقر إلى الوفرة<br />
+        - نعيش الثراء بدون خوف أو شعور بالذنب<br /><br />
+
+        ✅ بنفتح الكاميرات – دا شرط أساسي لأن الجلسة مش مجرد كورس، دي دائرة دعم نفسي حقيقية.<br />
+        ✅ بعد الجلسات التأسيسية، بتدخلي جروب واتساب للمتابعة اليومية.<br /><br />
+
+        💵 قيمة الاشتراك: **@ViewBag.Price**<br />
+        💎 اللقاءات بتُقدَّم بواسطة الأخصائية النفسية: **أسماء كامل** – مؤسسة ليليم<br /><br />
+
+        ❤️ التجربة دي مصممة خصيصًا للمرأة اللي عايزة تتحرر وتعيش وفرتها الداخلية والخارجية.<br />
+        أنتي تستحقي توصلي للثراء الحقيقي، والحرية النفسية والمالية 🌸
+    </p>
+
+    <div class="glow-wrapper">
+        <a href="@Url.Action("ChoosePayment", "SupportCircle", new { ViewBag.Price })" class="btn-session btn-glow">احجزي الآن</a>
+    </div>
+
+    <div>
+        <img src="~/MoneyFlow.jpg" alt="MoneyFlow Image" class="about-image" />
+    </div>
+</div>

@@ -1,8 +1,18 @@
+using Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.SqlServer;
+using PaymentContracts;
+using Services;
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Add Payments to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddScoped<IReview, ReviewServices>();
+builder.Services.AddScoped<IService, ServiceServices>();
+builder.Services.AddScoped<IPay, PayService>();
+builder.Services.AddHttpClient<PaymobService>();
+builder.Services.Configure<PaymobSettings>(builder.Configuration.GetSection("PaymobSettings"));
+builder.Services.AddDbContext<ReviewDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

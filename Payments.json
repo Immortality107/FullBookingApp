@@ -1,0 +1,44 @@
+[
+  {
+    "PaymentId": "FC64DB83-E94B-4E07-A438-1B71CC4E2FB8",
+    "PaymentName": "Vodafone Cash",
+    "PaymentDetails": "01006970792",
+    "Location": "Egypt"
+  },
+  {
+    "PaymentId": "8762980A-28F1-47B4-84CD-47D65AE7CA71",
+    "PaymentName": "Instapay",
+    "PaymentDetails": "Asmaa.mostafa1987@instapay",
+    "Location": "Egypt"
+  },
+  {
+    "PaymentId": "2EBDC7A1-1398-48F1-940D-C4022ACCE082",
+    "PaymentName": "CIB Bank Transfer",
+    "PaymentDetails": "100044321747",
+    "Location": "Egypt"
+  },
+  {
+    "PaymentId": "945F0AA6-2210-46C5-BCB5-67B77D221F29",
+    "PaymentName": "Zelle (US)",
+    "PaymentDetails": "+1 (214) 912-7068",
+    "Location": "International"
+  },
+  {
+    "PaymentId": "FFFE67F8-DB58-4F1D-907E-A3753CE3C939",
+    "PaymentName": "Emirates NBD",
+    "PaymentDetails": "IBAN: AE85 0260 0010 1579 8179 101 - Accountnumber: 1015798179101 - Name: Mayar Ahmed",
+    "Location": "International"
+  },
+  {
+    "PaymentId": "DFC9EC27-9B64-47B8-AB41-799DC2F61F03",
+    "PaymentName": "بنك الراجحي السعودي",
+    "PaymentDetails": "IBAN:SA16 8000 0858 6080 1286 3374 - Accountnumber:  077030010006082863374 - Name: Hassan Mohamed Shawki ElHayawan",
+    "Location": "International"
+  },
+  {
+    "PaymentId": "BD622138-DC61-456E-9187-386BD55C7656",
+    "PaymentName": "Paypal",
+    "PaymentDetails": "a_abdelgawad@hotmail.com",
+    "Location": "International"
+  }
+]

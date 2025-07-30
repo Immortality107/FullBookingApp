@@ -1,0 +1,150 @@
+﻿@{
+    ViewData["Title"] = "Body Space Circle";
+}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #fdf6f9;
+        color: #333;
+        padding-bottom: 50px;
+    }
+
+    .about-header {
+        background-color: #ffe4ec;
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+        .about-header h1 {
+            font-size: 2.8rem;
+            color: #aa336a;
+            font-weight: 600;
+        }
+
+    .about-content {
+        max-width: 950px;
+        margin: 40px auto;
+        padding: 30px;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+
+        .about-content p {
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+    .about-image {
+        width: 100%;
+        border-radius: 20px;
+        margin: 30px 0;
+        height: 100%;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .btn-session {
+        background-color: #d96c9c;
+        color: white;
+        border-radius: 25px;
+        padding: 10px 22px;
+        font-size: 1rem;
+        margin: 10px 10px 0 0;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-session:hover {
+            background-color: #b24c7d;
+            color: white;
+        }
+
+    .glow-wrapper {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    @@keyframes glow {
+        0% {
+            box-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4, 0 0 15px #ff69b4;
+        }
+
+        50% {
+            box-shadow: 0 0 10px #ff69b4, 0 0 30px #ff69b4, 0 0 20px #ff69b4;
+        }
+
+        100% {
+            box-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4, 0 0 15px #ff69b4;
+        }
+    }
+
+    .btn-glow {
+        background-color: #ff69b4;
+        border: none;
+        padding: 10px 20px;
+        font-weight: bold;
+        border-radius: 10px;
+        text-decoration: none;
+        animation: glow 1.5s infinite ease-in-out;
+        color: white !important;
+        box-shadow: 0 0 10px #ff69b4;
+    }
+
+        .btn-glow:hover {
+            color: orangered !important;
+        }
+
+    .highlight {
+        background-color: #fff3f7;
+        padding: 20px;
+        border-left: 5px solid #d96c9c;
+        border-radius: 10px;
+        margin: 30px 0;
+    }
+</style>
+
+<div class="about-header">
+    <h1>دايرة مساحة جسد 🌸</h1>
+</div>
+
+<div class="about-content">
+
+    <p>
+        برنامج مساحة جسد في دايرة ليليم لحياة الأنثى داخل جسدها، للوصول بها لحالة من الحضور، النشوة، السعادة، والرضا. <br />
+        هذه الرحلة تمتد لـ ٢١ يوم من التمارين اليومية والمتابعة من الأخصائية النفسية أسماء كامل في دايرة للسيدات حول العالم.
+    </p>
+
+    <div class="highlight">
+        <strong>هل تحتاجين مساحة جسد؟</strong><br />
+        هل تعانين من انزعاج من صورة جسدك؟ صعوبة في تقبله؟ مشاعر بعدم الراحة أو الحرج؟ آلام جسدية مزمنة؟ مشاكل في علاقتك مع الحميمية أو اللمس؟<br />
+        هذه الدائرة تدعوكِ لاكتشاف جسدك، شفاء علاقته بكِ، وحبك لذاتك من الداخل.
+    </div>
+
+    <p>
+        ✨ تزيد ثقتك بنفسك<br />
+        ✨ تحبين أنوثتك وتتواصلي معها<br />
+        ✨ تتدرّبي على الروتين البطيء للأنثى والحضور اللحظي<br />
+        ✨ تشفين أعمق آلامك الجسدية عبر التواصل معها<br />
+        ✨ تتذوقين طعم الاستماع لجسدك وإشاراته واحتياجاته<br />
+        <br />
+        ❌ لا توجد مكالمات فيديو<br />
+        ✅ المشاركة صوتية وحرة على مدار اليوم<br />
+        ✅ آمنة للسيدات فقط، وتناسب جميع الأعمار والجنسيات<br />
+        ✅ تقام على واتساب فقط 🌏<br />
+        ✅ متوفر بها إعادة مجانية دائمة<br />
+    </p>
+
+    <p>
+        <strong>التكلفة:</strong> @ViewBag.Price<br />
+        <strong>المدة:</strong> ٢١ يوم
+    </p>
+
+    <div class="glow-wrapper">
+        <a href="@Url.Action("ChoosePayment", "SupportCircle", new { price = ViewBag.Price })" class="btn-session btn-glow">احجزي الآن</a>
+    </div>
+
+    <img src="~/BodySpace.jpg" alt="Body Space Image" class="about-image" />
+
+</div>

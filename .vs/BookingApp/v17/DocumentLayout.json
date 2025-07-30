@@ -1,0 +1,215 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Kholoud\\BookingApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AE14564E-1284-4FFA-99EE-F2EB61B22A64}|BookingApp.csproj|c:\\kholoud\\bookingapp\\views\\home\\internationalcirclestypeview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AE14564E-1284-4FFA-99EE-F2EB61B22A64}|BookingApp.csproj|solutionrelative:views\\home\\internationalcirclestypeview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE14564E-1284-4FFA-99EE-F2EB61B22A64}|BookingApp.csproj|c:\\kholoud\\bookingapp\\views\\home\\services.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AE14564E-1284-4FFA-99EE-F2EB61B22A64}|BookingApp.csproj|solutionrelative:views\\home\\services.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE14564E-1284-4FFA-99EE-F2EB61B22A64}|BookingApp.csproj|c:\\kholoud\\bookingapp\\entities\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE14564E-1284-4FFA-99EE-F2EB61B22A64}|BookingApp.csproj|solutionrelative:entities\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE14564E-1284-4FFA-99EE-F2EB61B22A64}|BookingApp.csproj|c:\\kholoud\\bookingapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE14564E-1284-4FFA-99EE-F2EB61B22A64}|BookingApp.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE14564E-1284-4FFA-99EE-F2EB61B22A64}|BookingApp.csproj|c:\\kholoud\\bookingapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AE14564E-1284-4FFA-99EE-F2EB61B22A64}|BookingApp.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE14564E-1284-4FFA-99EE-F2EB61B22A64}|BookingApp.csproj|c:\\kholoud\\bookingapp\\views\\home\\egyptiancirclestypeview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AE14564E-1284-4FFA-99EE-F2EB61B22A64}|BookingApp.csproj|solutionrelative:views\\home\\egyptiancirclestypeview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE14564E-1284-4FFA-99EE-F2EB61B22A64}|BookingApp.csproj|c:\\kholoud\\bookingapp\\views\\home\\egyptiansessiontypeview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AE14564E-1284-4FFA-99EE-F2EB61B22A64}|BookingApp.csproj|solutionrelative:views\\home\\egyptiansessiontypeview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE14564E-1284-4FFA-99EE-F2EB61B22A64}|BookingApp.csproj|c:\\kholoud\\bookingapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AE14564E-1284-4FFA-99EE-F2EB61B22A64}|BookingApp.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE14564E-1284-4FFA-99EE-F2EB61B22A64}|BookingApp.csproj|c:\\kholoud\\bookingapp\\entities\\walletprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE14564E-1284-4FFA-99EE-F2EB61B22A64}|BookingApp.csproj|solutionrelative:entities\\walletprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE14564E-1284-4FFA-99EE-F2EB61B22A64}|BookingApp.csproj|c:\\kholoud\\bookingapp\\services\\paymobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE14564E-1284-4FFA-99EE-F2EB61B22A64}|BookingApp.csproj|solutionrelative:services\\paymobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE14564E-1284-4FFA-99EE-F2EB61B22A64}|BookingApp.csproj|c:\\kholoud\\bookingapp\\entities\\paymentmethods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE14564E-1284-4FFA-99EE-F2EB61B22A64}|BookingApp.csproj|solutionrelative:entities\\paymentmethods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Services.cshtml",
+              "DocumentMoniker": "C:\\Kholoud\\BookingApp\\Views\\Home\\Services.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Services.cshtml",
+              "ToolTip": "C:\\Kholoud\\BookingApp\\Views\\Home\\Services.cshtml",
+              "RelativeToolTip": "Views\\Home\\Services.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-30T03:46:19.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Service.cs",
+              "DocumentMoniker": "C:\\Kholoud\\BookingApp\\Entities\\Service.cs",
+              "RelativeDocumentMoniker": "Entities\\Service.cs",
+              "ToolTip": "C:\\Kholoud\\BookingApp\\Entities\\Service.cs",
+              "RelativeToolTip": "Entities\\Service.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T03:46:13.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Kholoud\\BookingApp\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Kholoud\\BookingApp\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAABoAAAAAm5mZmZklwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T03:45:56.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Kholoud\\BookingApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Kholoud\\BookingApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAA8AAAAAbWZmZmYUwBAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-30T03:27:42.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "InternationalCirclesTypeView.cshtml",
+              "DocumentMoniker": "C:\\Kholoud\\BookingApp\\Views\\Home\\InternationalCirclesTypeView.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\InternationalCirclesTypeView.cshtml",
+              "ToolTip": "C:\\Kholoud\\BookingApp\\Views\\Home\\InternationalCirclesTypeView.cshtml",
+              "RelativeToolTip": "Views\\Home\\InternationalCirclesTypeView.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-30T03:18:32.326Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EgyptianCirclesTypeView.cshtml",
+              "DocumentMoniker": "C:\\Kholoud\\BookingApp\\Views\\Home\\EgyptianCirclesTypeView.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\EgyptianCirclesTypeView.cshtml",
+              "ToolTip": "C:\\Kholoud\\BookingApp\\Views\\Home\\EgyptianCirclesTypeView.cshtml",
+              "RelativeToolTip": "Views\\Home\\EgyptianCirclesTypeView.cshtml",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAhwHkAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-29T12:46:33.661Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Kholoud\\BookingApp\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Kholoud\\BookingApp\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAHcAAAAAITMzMzMbwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-07T15:30:09.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EgyptianSessionTypeView.cshtml",
+              "DocumentMoniker": "C:\\Kholoud\\BookingApp\\Views\\Home\\EgyptianSessionTypeView.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\EgyptianSessionTypeView.cshtml",
+              "ToolTip": "C:\\Kholoud\\BookingApp\\Views\\Home\\EgyptianSessionTypeView.cshtml",
+              "RelativeToolTip": "Views\\Home\\EgyptianSessionTypeView.cshtml",
+              "ViewState": "AgIAAEMAAACAaWZmZmYkwE0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-17T03:06:25.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "WalletProvider.cs",
+              "DocumentMoniker": "C:\\Kholoud\\BookingApp\\Entities\\WalletProvider.cs",
+              "RelativeDocumentMoniker": "Entities\\WalletProvider.cs",
+              "ToolTip": "C:\\Kholoud\\BookingApp\\Entities\\WalletProvider.cs",
+              "RelativeToolTip": "Entities\\WalletProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T06:18:45.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PaymobService.cs",
+              "DocumentMoniker": "C:\\Kholoud\\BookingApp\\Services\\PaymobService.cs",
+              "RelativeDocumentMoniker": "Services\\PaymobService.cs",
+              "ToolTip": "C:\\Kholoud\\BookingApp\\Services\\PaymobService.cs",
+              "RelativeToolTip": "Services\\PaymobService.cs",
+              "ViewState": "AgIAAIQAAAAAzMzMzMwrwJMAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-20T09:52:36.376Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PaymentMethods.cs",
+              "DocumentMoniker": "C:\\Kholoud\\BookingApp\\Entities\\PaymentMethods.cs",
+              "RelativeDocumentMoniker": "Entities\\PaymentMethods.cs",
+              "ToolTip": "C:\\Kholoud\\BookingApp\\Entities\\PaymentMethods.cs",
+              "RelativeToolTip": "Entities\\PaymentMethods.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-13T04:52:52.847Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

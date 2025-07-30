@@ -74,7 +74,7 @@
 </style>
 
 <div class="session-container container">
-    <h1 class="session-title">🌸 Choose Your Session Type</h1>
+    <h1 class="session-title">@ViewData["Title"]</h1>
 
     <div class="row g-4">
         <!-- Offline Session -->
@@ -86,8 +86,8 @@
                         <p class="session-description">
                            Duration : 1 hour <br />
                             Location : Sokoun Healing Center In First Settlement,New Cairo <br />
-                            Fees : 1700EGP - Per Session  <br />
-                            OR 6200EGP For Monthly Package - 4 Sessions <br />
+                            Fees : @ViewBag.PrivateSessionPrice - Per Session  <br />
+                            OR @ViewBag.MonthlyPackagePrice For Monthly Package - 4 Sessions <br />
                             Session Within 1 Week From Booking Or Emergency Sessions Within 24 Hours. <br />
                             Notes : No Waiting Time At Center  <br />
                             Working Days : Sunday-Thursday <br />
@@ -97,8 +97,9 @@
                     <img src="~/LiliumOffline.jpg" alt="Offline Session" class="session-image" />
                 </div>
                 <div class="mt-3">
-                    <a href="#" onclick="showLocationPopup()" class="btn-session">Book One Session</a>
-                    <a href="#" onclick="showLocationPopup()" class="btn-session">Book Monthly Package</a>
+            <a href="@Url.Action("ChoosePayment", "SupportCircle", new { price = "1700EGP" })" class="btn-session">Book One Session</a>
+
+            <a href=" @Url.Action("ChoosePayment", "SupportCircle", new { price="6200EGP"})" class="btn-session">Book Monthly Package</a>
                 </div>
             </div>
         </div>
@@ -123,8 +124,8 @@
                     <img src="~/PrivateSessions.jpg" alt="Video Call Session" class="session-image" />
                 </div>
                 <div class="mt-3">
-                    <a href="#" onclick="showLocationPopup()" class="btn-session">Book One Session</a>
-                    <a href="#" onclick="showLocationPopup()" class="btn-session">Book Monthly Package</a>
+                    <a href="@Url.Action("ChoosePayment", "SupportCircle", new { price="1700EGP" })" class="btn-session">Book One Session</a>
+                <a href=" @Url.Action("ChoosePayment", "SupportCircle", new { price ="5200EGP"})" class="btn-session">Book Monthly Package</a>
                 </div>
             </div>
         </div>

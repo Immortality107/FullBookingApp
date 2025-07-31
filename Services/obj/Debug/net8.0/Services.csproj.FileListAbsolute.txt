@@ -15,3 +15,4 @@ C:\Kholoud\BookingApp\Services\obj\Debug\net8.0\Services.dll
 C:\Kholoud\BookingApp\Services\obj\Debug\net8.0\refint\Services.dll
 C:\Kholoud\BookingApp\Services\obj\Debug\net8.0\Services.pdb
 C:\Kholoud\BookingApp\Services\obj\Debug\net8.0\ref\Services.dll
+C:\Kholoud\BookingApp\Services\obj\Debug\net8.0\Services.sourcelink.json

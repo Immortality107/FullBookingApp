@@ -13,3 +13,4 @@ C:\Kholoud\BookingApp\ServiceContracts\obj\Debug\net8.0\ServiceContracts.dll
 C:\Kholoud\BookingApp\ServiceContracts\obj\Debug\net8.0\refint\ServiceContracts.dll
 C:\Kholoud\BookingApp\ServiceContracts\obj\Debug\net8.0\ServiceContracts.pdb
 C:\Kholoud\BookingApp\ServiceContracts\obj\Debug\net8.0\ref\ServiceContracts.dll
+C:\Kholoud\BookingApp\ServiceContracts\obj\Debug\net8.0\ServiceContracts.sourcelink.json

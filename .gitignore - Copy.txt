@@ -1,10 +1,10 @@
-.vs/
-*.exe
-*.dll
-*.user
-*.db
-*.log
+# Ignore build and user-specific files
 bin/
 obj/
-*.vsidx
+.vs/
+*.user
 *.suo
+*.dll
+*.pdb
+*.log
+*.cache

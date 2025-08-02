@@ -30,7 +30,7 @@ namespace MyBookingApp.Controllers
              _AllServices = _serviceService.GetServices().Result;
             _Settings= options.Value;
         }
-
+        [Route("/Index")]
         public async Task<IActionResult> Index()
         {
           List<ReviewResponse> AllReviews = await _ReviewService.GetReviews();
@@ -151,26 +151,27 @@ namespace MyBookingApp.Controllers
         [HttpPost]
         public async Task< IActionResult> PayPage(string PaymentName,string Price)
         {
-            string digitsOnly = new string(Price.Where(char.IsDigit).ToArray());
-            int  intPrice = int.Parse(digitsOnly);
-            intPrice *= 100;
-            string Auth = await _paymobService.AuthenticateAsync();        
-            int id = _paymobService.CreateOrderAsync(Auth, intPrice).Result;
-            string PaymentKey;
-            if (PaymentName=="Bank Transfer")
-            {
-                string redirectUrl = "https://localhost:7118/SupportCircle/PaymentCallback";
-                PaymentKey = await _paymobService.GeneratePaymentKeyAsync(Auth, id, intPrice, _Settings.CardIntegrationId, redirectUrl);
-                PaymentKey = _paymobService.GeneratePaymentKeyAsync(Auth, id, intPrice, _Settings.CardIntegrationId,redirectUrl).Result;
-                string iframeUrl = _paymobService.GetIframeUrl(PaymentKey, _Settings.IframeId);
-                return Redirect(iframeUrl);
+            //string digitsOnly = new string(Price.Where(char.IsDigit).ToArray());
+            //int  intPrice = int.Parse(digitsOnly);
+            //intPrice *= 100;
+            //string Auth = await _paymobService.AuthenticateAsync();        
+            //int id = _paymobService.CreateOrderAsync(Auth, intPrice).Result;
+            //string PaymentKey;
+            //if (PaymentName=="Bank Transfer")
+            //{
+            //    string redirectUrl = "https://localhost:7118/SupportCircle/PaymentCallback";
+            //    PaymentKey = await _paymobService.GeneratePaymentKeyAsync(Auth, id, intPrice, _Settings.CardIntegrationId, redirectUrl);
+            //    PaymentKey = _paymobService.GeneratePaymentKeyAsync(Auth, id, intPrice, _Settings.CardIntegrationId,redirectUrl).Result;
+            //    string iframeUrl = _paymobService.GetIframeUrl(PaymentKey, _Settings.IframeId);
+            //    return Redirect(iframeUrl);
+            //}
+            //else
+            //{
+            //    ViewBag.Price= intPrice;
+            //    return View("WalletInfo");
+           return RedirectToAction("StartUnifiedPayment");
             }
-            else
-            {
-                ViewBag.Price= intPrice;
-                return View("WalletInfo");
-            }
-        }
+        
         [HttpPost]
         public async Task <IActionResult> SubmitWalletPayment(WalletPaymentViewModel model,int Price)
         {
@@ -185,6 +186,15 @@ namespace MyBookingApp.Controllers
             string PaymentKey = _paymobService.GeneratePaymentKeyAsync(Auth, id, Price, _Settings.WalletIntegrationId,AFterPaymentredirectUrl).Result;
             string EncodedredirectUrl = _paymobService.InitiateWalletPaymentAsync(PaymentKey, model.WalletNumber).Result;
             string redirectUrl = WebUtility.UrlDecode(EncodedredirectUrl);
+            return Redirect(redirectUrl);
+        }
+ 
+        public async Task<IActionResult> StartUnifiedPayment()
+        {
+            int priceInCents = 170000; // EGP 1700
+            string integrationId = (364293935).ToString();
+
+            string redirectUrl = await _paymobService.CreatePaymentIntentionAsync(priceInCents, integrationId);
             return Redirect(redirectUrl);
         }
 

@@ -9,5 +9,7 @@ public class PaymobSettings
 
     public string IframeId { get; set; }
 
+    public string RedirectURL { get; set; }
+
 }
 

@@ -1,0 +1,17 @@
+[
+  {
+    "ReviewId": "e3cfe13f-03bb-4b12-85d8-f4e4a7cd4aa1",
+    "BookingID": "d2e84756-7743-4265-a40f-bac354fe0f31",
+    "ReviewMessage": "Excellent Payment, highly recommended!"
+  },
+  {
+    "ReviewId": "d84c39b2-0f8e-4e6d-8918-31c264ce3fd2",
+    "BookingID": "1a3e69e4-7ec9-48ff-8713-3a0c5d48702c",
+    "ReviewMessage": "Satisfactory experience overall."
+  },
+  {
+    "ReviewId": "627bb73e-8232-466f-b348-799b7bcd9b01",
+    "BookingID": "d2e84756-7743-4265-a40f-bac354fe0f31",
+    "ReviewMessage": "Very friendly staff and clean environment."
+  }
+]

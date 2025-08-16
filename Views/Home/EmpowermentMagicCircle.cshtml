@@ -1,0 +1,149 @@
+﻿@{
+    ViewData["Title"] = "Empowerment Magic Circle";
+}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #fdf6f9;
+        color: #333;
+        padding-bottom: 50px;
+    }
+
+    .about-header {
+        background-color: #ffe4ec;
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+        .about-header h1 {
+            font-size: 2.8rem;
+            color: #aa336a;
+            font-weight: 600;
+        }
+
+    .btn-session {
+        background-color: #d96c9c;
+        color: white !important;
+        border-radius: 25px;
+        padding: 10px 22px;
+        font-size: 1rem;
+        margin: 10px 10px 0 0;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-session:hover {
+            background-color: #b24c7d;
+            color: white;
+        }
+
+    .about-content {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 0 20px;
+        line-height: 1.8;
+        font-size: 1.1rem;
+        direction: rtl;
+    }
+
+        .about-content h2 {
+            color: #d96c9c;
+            margin-top: 30px;
+        }
+
+    .about-image {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        margin: 30px 0;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .glow-wrapper {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    @@keyframes glow {
+        0% {
+            box-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4, 0 0 15px #ff69b4;
+        }
+
+        50% {
+            box-shadow: 0 0 10px #ff69b4, 0 0 30px #ff69b4, 0 0 20px #ff69b4;
+        }
+
+        100% {
+            box-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4, 0 0 15px #ff69b4;
+        }
+    }
+
+    .btn-glow {
+        position: relative;
+        background-color: #ff69b4;
+        border: none;
+        padding: 10px 20px;
+        font-weight: bold;
+        border-radius: 10px;
+        text-decoration: none;
+        box-shadow: 0 0 10px #ff69b4;
+        animation: glow 1.5s infinite ease-in-out;
+        color: white !important;
+    }
+
+        .btn-glow:hover {
+            color: orangered !important;
+        }
+
+    .highlight {
+        background-color: #fff3f7;
+        padding: 20px;
+        border-left: 5px solid #d96c9c;
+        border-radius: 10px;
+        margin: 30px 0;
+    }
+</style>
+
+<div class="about-header">
+    <h1>دايرة سحر التمكين 🌸</h1>
+</div>
+
+<div class="about-content">
+    <p>
+        دايرة سحر التمكين ✨
+        هي رحلة تنقيب عن إمكانياتك وقدراتك الأنثوية اللي ربنا خلقها فيك، والسماح لها بالخروج من خلال جسدك والتجلي في العالم المادي لخدمة الآخرين وتحويل شغفك لثروة مالية 💸
+    </p>
+    <p>
+        💵 للسيدات فيديو كول في ليليم سيركل
+        <br />
+        💵 بنتقابل مرة في الشهر لمدة ٣ ساعات، أول يوم أحد من كل شهر، باشتراك قيمته 600/550 ج
+        <br />
+        💵 بس قبل اللقاء الشهري، بنحتاج نتقابل بشكل مكثف مرة في الأسبوع في 3 سيشنز تأسيسية مدتها 3 ساعات
+        <br />
+        ⭐️ الاشتراك في السيشنز التأسيسية هو <strong>@ViewBag.Price جنيه</strong>
+        <br />
+        ⭐️ كمان عندك هدية حضور دايرة الشكر مجاناً (تكلفتها الأصلية 600 ج)
+    </p>
+    <p>
+        بعد السيشن هتنضمي لجروب واتساب للدعم والمتابعة عشان نحقق نتائج ملموسة ✨
+        <br />
+        تقديم: الأخصائية النفسية أسماء كامل
+        <br />
+        اللقاءات كلها تفاعلية وبتشاركي فيها بنفسك، ومعاكي سيدات شبهك من دايرة ليليم 😍
+        <br />
+        أنتِ تستحقي التجربة دي وتذوقي طعمها 💖
+        <br />
+        طريق الحرية وتفعيل الأنوثة
+    </p>
+
+    <div class="glow-wrapper">
+        <a href="@Url.Action("ChoosePayment", "SupportCircle", new { price = ViewBag.Price, ViewBag.ServiceName })" class="btn-session btn-glow">Book Now</a>
+    </div>
+
+    <div>
+        <img src="~/WomenSupportingWomen.jpg" alt="Women Supporting Each Other" class="about-image" />
+    </div>
+</div>

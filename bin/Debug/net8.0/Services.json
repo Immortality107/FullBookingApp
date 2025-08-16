@@ -1,0 +1,63 @@
+[
+  {
+    "ServiceId": "E412D77E-77D3-4C06-8F7B-4DF9490E04D6",
+    "ServiceName": "(استشارات فردية (اونلاين/اوفلاين",
+    "ServiceDescribtion": "",
+    "ServicePriceLocal": 1700,
+    "ServicePriceInternational" : 170
+  },
+  {
+    "ServiceId": "3FE0D485-B0E4-4697-8CBE-651EF310B751",
+    "ServiceName": "دايرة الرفض",
+    "ServiceDescribtion": " لتعلم قبول الرفض وازاي تقولي لاءه وتصنعي حدود امنه بكل لطف دايره تعايش وتدريب .",
+    "ServicePriceLocal": 3000,
+    "ServicePriceInternational": 300
+  },
+  {
+    "ServiceId": "10F2CD9C-95C3-4D80-AFC6-B3B36836F588",
+    "ServiceName": "دايرة الوفرة المالية",
+    "ServiceDescribtion": " لتشافي علاقتك مع المال والوصول للثراء والحريه الماليه بالتناغم مع الانوثه",
+    "ServicePriceLocal": 3500,
+    "ServicePriceInternational": 350
+
+  },
+  {
+    "ServiceId": "8EC38D0B-1E87-43A2-92FC-F8511A9DE30D",
+    "ServiceName": "دايرة مساحة جسد",
+    "ServiceDescribtion": "لتواصل اعمق و مريح مع جسدك  .. هي فرصة لعمل علاقه حقيقيه مع جسمك كأنثى واستكشافه ، وقبوله زي ماهو بدون تعديلات او بدون شروط",
+    "ServicePriceLocal": 5000,
+    "ServicePriceInternational": 500
+
+  },
+  {
+    "ServiceId": "64ED73C8-94C4-44B8-B8EF-AF46BE9F2D73",
+    "ServiceName": "دايرة سحر التمكين",
+    "ServiceDescribtion": "لاسكتشاف شغفك وبصمتك الفريده وتحويلها لمشروع وادارته والربح منه بالتناغم مع الانوثه",
+    "ServicePriceLocal": 3500,
+    "ServicePriceInternational": 350
+
+  },
+  {
+    "ServiceId": "756D3B5A-A2A2-426C-B9B6-7F8552C64BB4",
+    "ServiceName": "دايرة الشكر",
+    "ServiceDescribtion": "لممارسة الامتنان",
+    "ServicePriceLocal": 600,
+    "ServicePriceInternational": 60
+
+  },
+  {
+    "ServiceId": "A0561A1E-F2EE-4256-BF77-7B4A83D20D35",
+    "ServiceName": "دايرة الأنس",
+    "ServiceDescribtion": "هنتقابل مرة في الشهر نحكي ونتشارك ونسمع بعض بقلوب رحيمة بدون احكام ولا نصايح ندعم , نطبطب , نحضن , نقبل بعض بكل اللي فينا باللي عاجبنا و اللي مش عاجبنا",
+    "ServicePriceLocal": 600,
+    "ServicePriceInternational": 60
+
+  },
+  {
+    "ServiceId": "0E0DD7BD-4941-4D50-956E-D3553580FADC",
+    "ServiceName": "دايرة سنجل مامي",
+    "ServiceDescribtion": "لمشاركة كل تحديات الحياه بشكل عام ، وانطلاقه امنه واكثر صحية",
+    "ServicePriceLocal": 600,
+    "ServicePriceInternational": 60
+  }
+]

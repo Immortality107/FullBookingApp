@@ -1,0 +1,58 @@
+﻿<style>
+    .service-timeline {
+        position: relative;
+        padding: 20px 0;
+        margin: 40px 0;
+        direction: rtl;
+    }
+
+    .timeline-item {
+        position: relative;
+        padding-right: 50px;
+        margin-bottom: 40px;
+        text-align: right;
+    }
+
+        .timeline-item::before {
+            content: '🌸';
+            position: absolute;
+            right: 0;
+            top: 5px;
+            font-size: 1.2rem;
+        }
+
+        .timeline-item h5 {
+            color: #b1447d;
+            font-weight: 600;
+            font-size: 1.3rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .timeline-item p {
+            color: #555;
+            margin-top: 5px;
+            line-height: 1.6;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+    .section-title {
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5rem;
+        color: #a03c73;
+        margin-bottom: 40px;
+    }
+</style>
+
+<h2 class="section-title">اكتشفي خدماتنا 🎀​</h2>
+<div class="container">
+    <div class="service-timeline">
+        @foreach (var service in Model)
+        {
+            <div class="timeline-item">
+                <h5>@service.ServiceName</h5>
+                <p>@service.ServiceDescribtion</p>
+            </div>
+        }
+    </div>
+</div>

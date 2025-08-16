@@ -1,0 +1,60 @@
+﻿ @{
+    ViewBag.Title = "Payment Successful";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="payment-success-container">
+    <div class="payment-card">
+        <div class="checkmark-circle">
+            <span>&#10003;</span>
+        </div>
+        <h2>هنيئا يا زهرة ليليم </h2>
+        <p>لقد أتممت عملية الدفع بنجاح  💖</p>
+        <p>.فلنبدء خطوات التسجيل</p>       
+        <a href="https://forms.gle/fEiZbsJHdsUDQnFdA" class="btn-back-home" target="_blank"><span style="font:100;">املي استمارة السيشن</span> الخطوة الأولى</a>
+        <br />
+        <a href="https://docs.google.com/document/d/1vcl7En3RmaC8tEAOKklZ4FabXD5omUxP1m8wIVobqU0/edit?usp=sharing" class="btn-back-home" target="_blank"><span style="font:100;">اختاري موعدك</span>الخطوة الثانية</a>
+
+        </div>
+        </section>
+
+<style>
+    .payment-success-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        background: #fff0f6;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .payment-card {
+        background: white;
+        padding: 40px 30px;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(255, 182, 193, 0.3);
+        text-align: center;
+        max-width: 400px;
+    }
+
+    .checkmark-circle {
+        font-size: 48px;
+        color: #e75480;
+        margin-bottom: 20px;
+    }
+
+    .btn-back-home {
+        margin-top: 25px;
+        display: inline-block;
+        background-color: #e75480;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-back-home:hover {
+        background-color: #d03a6b;
+    }
+</style>

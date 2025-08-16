@@ -1,0 +1,78 @@
+﻿@*
+@model WalletPaymentViewModel
+
+@{
+    ViewData["Title"] = "💖 Enter Wallet Info";
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+
+<style>
+    body {
+        background-color: #fff4f8;
+        font-family: 'Segoe UI', sans-serif;
+        color: #444;
+    }
+
+    .wallet-form-container {
+        max-width: 500px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #d63384;
+    }
+
+    .form-label {
+        color: #b23a6f;
+    }
+
+    .btn-pink {
+        background-color: #d63384;
+        color: white;
+        border: none;
+    }
+
+        .btn-pink:hover {
+            background-color: #c2186a;
+        }
+</style>
+
+<div class="wallet-form-container">
+    <h2>👜 Wallet Payment</h2>
+
+    <form asp-action="SubmitWalletPayment" method="post">
+        <div class="mb-3">
+            <label asp-for="WalletProvider" class="form-label">Wallet Provider</label>
+            <select asp-for="WalletProvider" class="form-select" required>
+                <option value="">-- Select Provider --</option>
+                <option value="Vodafone Cash">Vodafone Cash</option>
+                <option value="Etisalat Cash">Etisalat Cash</option>
+                <option value="Orange Money">Orange Money</option>
+                <option value="WE Pay">WE Pay</option>
+                 <option value="Instapay">InstaPay</option>
+
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="WalletNumber" class="form-label">Wallet Number</label>
+            <input asp-for="WalletNumber" class="form-control" placeholder="Ex: 01012345678" required />
+            <span asp-validation-for="WalletNumber" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">Account Holder Name</label>
+            <input asp-for="Name" class="form-control" placeholder="Ex: Your full name" required />
+        </div>
+        <input type="hidden" name="Price" value="@ViewBag.Price" />
+        <button type="submit"  class="btn btn-pink w-100">Confirm Wallet Info</button>
+    </form>
+</div>
+ *@

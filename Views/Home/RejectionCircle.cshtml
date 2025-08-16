@@ -1,0 +1,153 @@
+﻿@{
+    ViewData["Title"] = "Rejection Circle";
+}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #fdf6f9;
+        color: #333;
+        padding-bottom: 50px;
+    }
+
+    .about-header {
+        background-color: #ffe4ec;
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+        .about-header h1 {
+            font-size: 2.8rem;
+            color: #aa336a;
+            font-weight: 600;
+        }
+
+    .about-content {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 0 20px;
+        line-height: 1.8;
+    }
+
+        .about-content p {
+            background-color: #fff3f7;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(217, 108, 156, 0.1);
+            font-size: 1.05rem;
+            color: #444;
+        }
+
+        .about-content h2 {
+            color: #d96c9c;
+            margin-top: 30px;
+        }
+
+    .about-image {
+        width: 100%;
+        border-radius: 20px;
+        margin: 30px 0;
+        height: 100%;
+        max-height: 1000px;
+        object-fit: cover;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .btn-session {
+        background-color: #d96c9c;
+        color: white;
+        border-radius: 25px;
+        padding: 12px 28px;
+        font-size: 1.1rem;
+        margin-top: 20px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        display: inline-block;
+    }
+
+        .btn-session:hover {
+            background-color: #b24c7d;
+            color: white;
+        }
+
+    .glow-wrapper {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    @@keyframes glow {
+        0% {
+            box-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4, 0 0 15px #ff69b4;
+        }
+
+        50% {
+            box-shadow: 0 0 10px #ff69b4, 0 0 30px #ff69b4, 0 0 20px #ff69b4;
+        }
+
+        100% {
+            box-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4, 0 0 15px #ff69b4;
+        }
+    }
+
+    .btn-glow {
+        background-color: #ff69b4;
+        border: none;
+        padding: 12px 30px;
+        font-weight: bold;
+        border-radius: 25px;
+        text-decoration: none;
+        animation: glow 1.5s infinite ease-in-out;
+        color: white !important;
+        font-size: 1.1rem;
+        box-shadow: 0 0 10px #ff69b4;
+    }
+
+        .btn-glow:hover {
+            color: orangered !important;
+            background-color: #ff80bf;
+        }
+</style>
+
+<div class="about-header">
+    <h1>دايرة الرفض 🌸</h1>
+</div>
+
+<div class="about-content">
+    <p>
+        حفلة الرفض هي دايرة علاجية ، دايرة تعرض<br /><br />
+        لو انتِ عارفة عن نفسك إنك مش بتقولي لأ، أو بتجدي صعوبة في ده، دايماً شخصية مبادرة وبتدي أكتر ما بتاخدي، والناس عارفة إن بابك مفتوح في أي وقت.<br /><br />
+
+        عندك حساسية من رفض الآخرين؟<br />
+        بتنكمشي جوا نفسك لما حد يقولك لأ؟ بقيتي بتخافي من الطلب أصلاً؟<br />
+        بتحسي بعدم تقدير؟<br />
+        بتحسي بالذنب لما بترفضي؟<br /><br />
+
+        ✨ انتي محتاجه "حفلة الرفض" علشان:<br />
+        - تكوني حقيقية وتفكري في نفسك أولاً<br />
+        - تحترمي نفسك وحدودك<br />
+        - تتشافي من متلازمة إرضاء الآخرين<br />
+        - تبني علاقات صحية وتطوري مناعتك النفسية<br />
+        - تتواصلي مع أنوثتك الحقيقية وصوتك الداخلي<br /><br />
+
+        🧠 بتديرها الأخصائية النفسية **أسماء كامل** - جامعة عين شمس<br />
+        صاحبة مؤسسة ليليم للدعم النفسي والمشاركة<br /><br />
+
+        🌟 دايرة الرفض عبارة عن جروب واتساب لمدة ١٠ أيام، فيه تمرين يومي، ومشاركات صوتية فقط، وهيكون مطلوب منك تسمعي مشاركات باقي العضوات وتعملي React.<br /><br />
+
+        🎯 القيمة: @ViewBag.Price جنيه<br />
+        تبدأ من 21 حتى 30 الشهر.<br /><br />
+
+        🎁 هدية مجانية عند الاشتراك: حضور "دايرة الشكر" بقيمة 600 ج في آخر خميس من الشهر من ١٠ إلى ١ ظهراً.<br /><br />
+
+        🔒 الدواير للسيدات فقط. تقدري تشتركي من أي مكان في العالم 💗
+    </p>
+
+    <div class="glow-wrapper">
+        <a href="@Url.Action("ChoosePayment", "SupportCircle", new { ViewBag.Price, ViewBag.ServiceName })" class="btn-session btn-glow">احجزي الآن</a>
+    </div>
+
+    <div>
+        <img src="~/Rejection.jpg" alt="Rejection Image" class="about-image" />
+    </div>
+</div>

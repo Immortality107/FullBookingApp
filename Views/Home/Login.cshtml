@@ -1,0 +1,124 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+    Layout= "~/Views/Shared/_AuthLayout.cshtml";
+}
+
+<div class="login-container">
+    <div class="login-card">
+        <h2 class="login-title">Welcome Back 💖</h2>
+        <p class="login-subtitle">Please login to continue</p>
+
+        <form method="post" asp-action="Login">
+            <div class="form-group">
+                <label for="Email">Email</label>
+                <input type="email" id="Email" name="Email" required />
+            </div>
+
+            <div class="form-group">
+                <label for="Password">Password</label>
+                <input type="password" id="Password" name="Password" required />
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+            <p class="signup-text">
+                Don’t have an account?
+                <a asp-action="Register">Sign up</a>
+            </p>
+        </form>
+    </div>
+</div>
+
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #ffe6f0, #f9e0ff);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .login-container {
+        width: 100%;
+        max-width: 400px;
+        padding: 15px;
+    }
+
+    .login-card {
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 4px 20px rgba(255, 182, 193, 0.4);
+        padding: 30px;
+        text-align: center;
+    }
+
+    .login-title {
+        font-size: 1.8rem;
+        color: #d63384;
+        margin-bottom: 5px;
+    }
+
+    .login-subtitle {
+        font-size: 0.9rem;
+        color: #888;
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        text-align: left;
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        font-size: 0.9rem;
+        color: #444;
+        margin-bottom: 5px;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ffd6e8;
+        border-radius: 10px;
+        outline: none;
+        font-size: 0.95rem;
+        transition: 0.2s;
+    }
+
+        input:focus {
+            border-color: #d63384;
+            box-shadow: 0 0 5px rgba(214, 51, 132, 0.3);
+        }
+
+    .login-btn {
+        background: linear-gradient(135deg, #ff99cc, #d63384);
+        color: white;
+        border: none;
+        padding: 12px;
+        width: 100%;
+        border-radius: 15px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+        .login-btn:hover {
+            background: linear-gradient(135deg, #ff85c1, #c2185b);
+        }
+
+    .signup-text {
+        margin-top: 15px;
+        font-size: 0.85rem;
+    }
+
+        .signup-text a {
+            color: #d63384;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+            .signup-text a:hover {
+                text-decoration: underline;
+            }
+</style>

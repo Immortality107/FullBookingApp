@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Booking Calendar";
+}
+
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+
+<div id="calendar"></div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var calendarEl = document.getElementById('calendar');
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'timeGridWeek',
+            selectable: true,
+            editable: false,
+            nowIndicator: true,
+            allDaySlot: false,
+
+            // Limit to working days & hours
+            businessHours: [
+                {
+                    daysOfWeek: [0,1, 2, 3, 4], // Mon-Fri
+                    startTime: '09:00',
+                    endTime: '14:00'
+                }
+            ],
+            slotMinTime: "09:00:00",
+            slotMaxTime: "14:00:00",
+
+            events: '/Booking/GetEvents',
+
+
+        dateClick: function(info) {
+        let formatted = info.date.toLocaleString('en-US', {
+            weekday: 'long',
+            year: 'numeric',
+            day: 'numeric',
+            month: 'long',
+            hour: '2-digit',
+            minute: '2-digit'
+        });
+
+        Swal.fire({
+            title: 'تأكيد الحجز',
+            html: `<b>${formatted}</b><br>هل تريدين تأكيد حجز هذا الموعد ؟`,
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonText: 'نعم, تأكيد!',
+            cancelButtonText: 'اعادة اختيار الموعد',
+            reverseButtons: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire(
+                    'مبروك!',
+                    'تم حجز موعدك.',
+                    'ألقاك على خير'
+                );
+                // Send info.dateStr to backend here
+            }
+        });
+    },
+
+            // Click on existing event
+            eventClick: function (info) {
+                alert('Event: ' + info.event.title);
+                // Here you can open booking details or cancel
+            }
+        });
+
+        calendar.render();
+    });
+</script>

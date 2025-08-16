@@ -2803,11 +2803,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Kholoud\\BookingApp\\Entities\\Entities.csproj",
+      "projectUniqueName": "C:\\Kholoud\\MyBookingApp\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "C:\\Kholoud\\BookingApp\\Entities\\Entities.csproj",
+      "projectPath": "C:\\Kholoud\\MyBookingApp\\Entities\\Entities.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Kholoud\\BookingApp\\Entities\\obj\\",
+      "outputPath": "C:\\Kholoud\\MyBookingApp\\Entities\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

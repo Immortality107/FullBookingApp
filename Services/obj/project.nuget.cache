@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HX/wUWd5DK4=",
+  "dgSpecHash": "7wWTmKMkVJE=",
   "success": true,
-  "projectFilePath": "C:\\Kholoud\\BookingApp\\Services\\Services.csproj",
+  "projectFilePath": "C:\\Kholoud\\MyBookingApp\\Services\\Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

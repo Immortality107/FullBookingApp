@@ -172,6 +172,9 @@ namespace BookingApp.Migrations
                     b.Property<Guid>("BookingID")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid>("PaymentId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<DateTime>("StartTime")
                         .HasColumnType("datetime2");
 
@@ -255,6 +258,30 @@ namespace BookingApp.Migrations
                             PaymentDetails = "a_abdelgawad@hotmail.com",
                             PaymentName = "Paypal"
                         });
+                });
+
+            modelBuilder.Entity("RegisteredAccounts", b =>
+                {
+                    b.Property<Guid>("AccountID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(75)
+                        .HasColumnType("nvarchar(75)");
+
+                    b.Property<string>("HashedPassword")
+                        .IsRequired()
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
+
+                    b.HasKey("AccountID");
+
+                    b.HasIndex("Email")
+                        .IsUnique();
+
+                    b.ToTable("RegisteredAccount", (string)null);
                 });
 
             modelBuilder.Entity("Review", b =>

@@ -20,6 +20,7 @@ namespace Entities
 
         public DbSet<Appointments> Appointments { get; set; }
 
+        public DbSet<RegisteredAccounts> RegisteredAccount { get; set; }
 
         public ReviewDbContext(DbContextOptions options) : base(options)
         {
@@ -35,7 +36,7 @@ namespace Entities
             modelBuilder.Entity<PaymentMethods>().ToTable("Payments");
             modelBuilder.Entity<Client>().ToTable("Clients");
             modelBuilder.Entity<Service>().ToTable("Services");
-
+            modelBuilder.Entity<RegisteredAccounts>().ToTable("RegisteredAccount");
             string? stReviews = System.IO.File.ReadAllText("Reviews.json");
             List<Review>? Reviews = System.Text.Json.JsonSerializer.Deserialize<List<Review>>(stReviews);
             if (Reviews != null)
@@ -77,7 +78,9 @@ namespace Entities
             {
                 modelBuilder.Entity<Service>().HasData(Services);
             }
-
+            modelBuilder.Entity<RegisteredAccounts>()
+            .HasIndex(a => a.Email)
+            .IsUnique();
             //modelBuilder.Entity<Booking>().Property(temp => temp.TIN).
             //    HasColumnName("TaxIdentificationNumber").HasColumnType("varchar(8)").HasDefaultValue("ABDD1234");
         }

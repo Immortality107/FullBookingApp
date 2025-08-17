@@ -1,4 +1,4 @@
-﻿
+﻿@model LoginDTO
 @{
     ViewData["Title"] = "Login";
     Layout= "~/Views/Shared/_AuthLayout.cshtml";
@@ -12,17 +12,21 @@
         <form method="post" asp-action="Login">
             <div class="form-group">
                 <label for="Email">Email</label>
-                <input type="email" id="Email" name="Email" required />
+                <input type="email" asp-for="Email"  id="Email" name="Email" required />
+                <span asp-validation-for="Email" class="text-danger"></span>
+
             </div>
 
             <div class="form-group">
                 <label for="Password">Password</label>
-                <input type="password" id="Password" name="Password" required />
+                <input asp-for="Password" type="password" id="Password" name="Password" required />
+                <span asp-validation-for="Password" class="text-danger"></span> 
+
             </div>
             <button type="submit" class="login-btn">Login</button>
             <p class="signup-text">
                 Don’t have an account?
-                <a asp-action="Register">Sign up</a>
+                <a asp-action="Register" asp-controller="Home" >Sign up</a>
             </p>
         </form>
     </div>
@@ -122,3 +126,6 @@
                 text-decoration: underline;
             }
 </style>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

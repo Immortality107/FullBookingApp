@@ -203,14 +203,32 @@ namespace MyBookingApp.Controllers
         {
             return View();
         }
-        [HttpPost]
-        public IActionResult Register(string Email,string Password)
-        {     
-            LoginDTO loginAccount= new LoginDTO { Email = Email, Password = Password };
-            if (_LogService.AccountFound(loginAccount).Result)
-            { return View(); }
-                else
-                        return View();
+        [HttpPost("~/Home/Login")]
+
+        public async Task<IActionResult> Register(string Email, string Password)
+        {
+            List<LoginDTO> AlllogingAccounts = await _LogService.GetAllRegisteredAccounts();
+            foreach (LoginDTO L in AlllogingAccounts)
+            {
+                if (L.Email==Email&& L.Password==Password)
+                {
+                    return View("Index");
+                }
+                else if (L.Email==Email && L.Password != Password)
+                {
+                    ModelState.AddModelError("Password", "Password Is Invalid!");
+                    return View("Login");
+
+                }
+            }
+                ModelState.AddModelError("Email", "Email is not available, please sign up!");
+                return View("Login");
+    
+
+            }
+
+        
+       
         }
     }
-}
+

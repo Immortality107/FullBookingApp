@@ -10,6 +10,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IReview, ReviewServices>();
 builder.Services.AddScoped<IService, ServiceServices>();
 builder.Services.AddScoped<IPay, PayService>();
+builder.Services.AddScoped<ILogin, LoginService>();
+
 builder.Services.AddHttpClient<PaymobService>();
 builder.Services.Configure<PaymobSettings>(builder.Configuration.GetSection("PaymobSettings"));
 builder.Services.AddDbContext<ReviewDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"), b=> b.MigrationsAssembly("Entities")));

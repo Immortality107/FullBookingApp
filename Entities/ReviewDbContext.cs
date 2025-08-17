@@ -90,7 +90,11 @@ namespace Entities
             return Reviews.FromSqlRaw("Execute[dbo].[GetAllReviews]").ToList();
 
         }
+        //public List<RegisteredAccounts> sp_GetAllRegisteredAccounts()
+        //{
+        //    return RegisteredAccount.FromSqlRaw("Execute[dbo].[GetAllRegisteredAccounts]").ToList();
 
+        //}
         public int sp_InsertReview(Review review)
         {
             SqlParameter[] parameters = new SqlParameter[] {

@@ -19,16 +19,19 @@ namespace MyBookingApp.Controllers
         private readonly IReview _ReviewService;
         private readonly IService _serviceService;
         private readonly IPay _PayService;
+        private readonly ILogin _LogService;
+
         private List<Service?> _AllServices;
         private readonly PaymobService _paymobService;
         private readonly PaymobSettings _Settings;
-        public HomeController(ILogger<HomeController> logger, IReview review,IService service, IPay payservice, PaymobService paymobService, IOptions<PaymobSettings> options)
+        public HomeController(ILogger<HomeController> logger, IReview review,IService service, IPay payservice,ILogin _login, PaymobService paymobService, IOptions<PaymobSettings> options)
         {
             _logger = logger;
             _ReviewService = review;
             _serviceService = service;
             _PayService = payservice;
             _paymobService = paymobService;
+            _LogService= _login;
              _AllServices = _serviceService.GetServices().Result;
             _Settings= options.Value;
         }
@@ -199,6 +202,15 @@ namespace MyBookingApp.Controllers
         public IActionResult Login()
         {
             return View();
+        }
+        [HttpPost]
+        public IActionResult Register(string Email,string Password)
+        {     
+            LoginDTO loginAccount= new LoginDTO { Email = Email, Password = Password };
+            if (_LogService.AccountFound(loginAccount).Result)
+            { return View(); }
+                else
+                        return View();
         }
     }
 }

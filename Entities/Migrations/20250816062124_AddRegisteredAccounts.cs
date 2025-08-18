@@ -24,7 +24,7 @@ namespace BookingApp.Migrations
                 {
                     AccountID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(75)", maxLength: 75, nullable: false),
-                    HashedPassword = table.Column<string>(type: "nvarchar(25)", maxLength: 25, nullable: false)
+                    HashedPassword = table.Column<string>(type: "nvarchar(200)", maxLength: 25, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -36,6 +36,8 @@ namespace BookingApp.Migrations
                 table: "RegisteredAccount",
                 column: "Email",
                 unique: true);
+
+ 
         }
 
         /// <inheritdoc />
@@ -48,5 +50,7 @@ namespace BookingApp.Migrations
                 name: "PaymentId",
                 table: "Appointments");
         }
+
+
     }
 }

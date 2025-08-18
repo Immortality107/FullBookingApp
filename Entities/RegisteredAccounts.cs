@@ -12,7 +12,7 @@ public class RegisteredAccounts
         public required string Email { get; set; }
 
         [Required]
-        [StringLength(25)]
+        [MaxLength(200)]
         public required string HashedPassword { get; set; }
 
 }

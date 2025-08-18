@@ -13,7 +13,7 @@ public class LoginDTO
         using (SHA256 sha256 = SHA256.Create())
         {
             byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-            return Convert.ToBase64String(bytes); // Store this in DB
+            return Convert.ToBase64String(bytes);
         }
     }
     public RegisteredAccounts ToRegisteredAccount()

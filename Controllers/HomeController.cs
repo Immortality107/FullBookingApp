@@ -222,13 +222,23 @@ namespace MyBookingApp.Controllers
                 }
             }
                 ModelState.AddModelError("Email", "Email is not available, please sign up!");
-                return View("Login");
-    
-
+                return View("Login"); 
             }
 
-        
-       
+        public IActionResult SignUp()
+        {
+            return View();
         }
+
+        public async Task<IActionResult> AddAccount(string Email,string Password)
+        {
+            LoginDTO dTO= new LoginDTO { Email = Email, Password = Password };
+            Guid id = await _LogService.AddAccount(dTO);
+            if (id!=Guid.Empty &&  _LogService.AddAccount(dTO)!=null)
+                return View("Index");
+            else return View();
+        }
+
+    }
     }
 

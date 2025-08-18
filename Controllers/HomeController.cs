@@ -230,9 +230,13 @@ namespace MyBookingApp.Controllers
             return View();
         }
 
-        public async Task<IActionResult> AddAccount(string Email,string Password)
+        public async Task<IActionResult> AddAccount(SignUpDTO model)
         {
-            LoginDTO dTO= new LoginDTO { Email = Email, Password = Password };
+            if (!ModelState.IsValid)
+            {
+                return View("SignUp",model);
+            }
+            LoginDTO dTO= new LoginDTO { Email = model.Email, Password = model.Password };
             Guid id = await _LogService.AddAccount(dTO);
             if (id!=Guid.Empty &&  _LogService.AddAccount(dTO)!=null)
                 return View("Index");

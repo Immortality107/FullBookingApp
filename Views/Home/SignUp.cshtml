@@ -15,13 +15,59 @@
                 <input type="email" asp-for="Email" id="Email" name="Email" required />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
+            <div class="form-group">
+                <label for="UserName">Name</label>
+                <input type="text" asp-for="UserName" id="UserName" name="UserName" required />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+              <div class="form-group">
+                <label for="Phone">Phone</label>
+                <input type="tel" asp-for="Phone" id="Phone" name="Phone" required />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="Country">Country</label>
+                <input type="text" asp-for="Country" id="Country" name="Country" required />
+                <span asp-validation-for="Country" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="Age">Age</label>
+                <input type="number" asp-for="Age" id="Age" name="Age" required />
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
 
+            <div class="form-group">
+                <label>Gender</label>
+                <div>
+                    <input type="radio" asp-for="Gender" value="Male" id="GenderMale" />
+                    <label for="GenderMale">Male</label>
+                </div>
+                <div>
+                    <input type="radio" asp-for="Gender" value="Female" id="GenderFemale" />
+                    <label for="GenderFemale">Female</label>
+                </div>
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+
+     @*        <div class="form-group">
+                <label>Gender</label>
+                <span>
+                <input type="radio" value="Female"  asp-for="Gender" id="GenderFemale" name="GenderFemale" required />
+               <span for="GenderFemale">Female</span>
+            </span>
+            <span>
+                <input type="radio" value="Male" asp-for="Gender" id="GenderMale" name="GenderMale" required />
+                <span for="GenderMale">Male</span>
+                <span asp-validation-for="Gender" class="text-danger"></span>
+
+                </span>
+            </div> *@
             <div class="form-group">
                 <label for="Password">Password</label>
                 <input type="password" asp-for="Password" id="Password" name="Password" required />
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
-
+           
             <div class="form-group">
                 <label for="ConfirmPassword">Confirm Password</label>
                 <input type="password" id="ConfirmPassword" name="ConfirmPassword" required />

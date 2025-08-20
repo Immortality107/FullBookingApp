@@ -11,7 +11,11 @@ public class RegisteredAccounts
    
         public required string Email { get; set; }
 
-        [Required]
+       [Required]
+       [StringLength(75)]
+       public required string UserName { get; set; }
+
+    [Required]
         [MaxLength(200)]
         public required string HashedPassword { get; set; }
 

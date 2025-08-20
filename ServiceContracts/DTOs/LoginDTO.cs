@@ -6,9 +6,11 @@ using System.Text;
 public class LoginDTO
 {
     public required string Email { get; set; }
+    public required string Username { get; set; }
+
     public required string Password { get; set; }
 
-    static string HashPassword(string password)
+    public static string HashPassword(string password)
     {
         using (SHA256 sha256 = SHA256.Create())
         {
@@ -18,14 +20,14 @@ public class LoginDTO
     }
     public RegisteredAccounts ToRegisteredAccount()
     {
-        return new RegisteredAccounts() { AccountID = Guid.NewGuid(), Email = Email, HashedPassword=HashPassword(Password) };
+        return new RegisteredAccounts() { AccountID = Guid.NewGuid(), Email = Email, HashedPassword=HashPassword(Password),UserName=Username };
     }
 }
     public static class  LoginExtension
     {
         public static LoginDTO ToLoginDTO(this RegisteredAccounts registeredAccounts)
         {
-            return new LoginDTO() { Email = registeredAccounts.Email, Password = registeredAccounts.HashedPassword };
+            return new LoginDTO() { Email = registeredAccounts.Email, Password = registeredAccounts.HashedPassword , Username=registeredAccounts.UserName };
         }
     }
     

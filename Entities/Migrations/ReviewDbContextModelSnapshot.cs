@@ -276,6 +276,11 @@ namespace BookingApp.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasMaxLength(75)
+                        .HasColumnType("nvarchar(75)");
+
                     b.HasKey("AccountID");
 
                     b.HasIndex("Email")

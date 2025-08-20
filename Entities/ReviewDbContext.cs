@@ -30,7 +30,6 @@ namespace Entities
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
             modelBuilder.Entity<Review>().ToTable("Reviews");
             modelBuilder.Entity<Booking>().ToTable("Bookings");
             modelBuilder.Entity<PaymentMethods>().ToTable("Payments");

@@ -1,9 +1,11 @@
 ﻿
 using AspNetCoreGeneratedDocument;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Options;
 using PaymentContracts;
 using PaymentContracts.DTOs;
+using ServiceContracts.DTOs;
 using System.Diagnostics;
 using System.IO.Pipelines;
 using System.Net;
@@ -20,11 +22,14 @@ namespace MyBookingApp.Controllers
         private readonly IService _serviceService;
         private readonly IPay _PayService;
         private readonly ILogin _LogService;
+        private readonly IClient _ClientService;
 
         private List<Service?> _AllServices;
         private readonly PaymobService _paymobService;
         private readonly PaymobSettings _Settings;
-        public HomeController(ILogger<HomeController> logger, IReview review,IService service, IPay payservice,ILogin _login, PaymobService paymobService, IOptions<PaymobSettings> options)
+        public HomeController(ILogger<HomeController> logger, IReview review,
+            IService service, IPay payservice,ILogin _login, 
+            PaymobService paymobService, IOptions<PaymobSettings> options,IClient clientService)
         {
             _logger = logger;
             _ReviewService = review;
@@ -33,6 +38,7 @@ namespace MyBookingApp.Controllers
             _paymobService = paymobService;
             _LogService= _login;
              _AllServices = _serviceService.GetServices().Result;
+            _ClientService = clientService;
             _Settings= options.Value;
         }
         [Route("/Index")]
@@ -40,8 +46,9 @@ namespace MyBookingApp.Controllers
 
         public async Task<IActionResult> Index()
         {
-          List<ReviewResponse> AllReviews = await _ReviewService.GetReviews();
 
+            List<ReviewResponse> AllReviews = await _ReviewService.GetReviews();
+            ViewBag.ClientName= "";
             return View(AllReviews);
         }
         [Route("/About")]
@@ -210,10 +217,16 @@ namespace MyBookingApp.Controllers
             List<LoginDTO> AlllogingAccounts = await _LogService.GetAllRegisteredAccounts();
             foreach (LoginDTO L in AlllogingAccounts)
             {
-                if (L.Email==Email&& L.Password==Password)
+                if (L.Email==Email)
                 {
-                    return View("Index");
-                }
+                    if (L.Password== LoginDTO.HashPassword(Password))
+                    { 
+                       
+                    HttpContext.Session.SetString("UserName", L.Username);
+
+                        ViewBag.ClientName= L.Username;
+                        return RedirectToAction("Index");
+                    } }
                 else if (L.Email==Email && L.Password != Password)
                 {
                     ModelState.AddModelError("Password", "Password Is Invalid!");
@@ -225,22 +238,37 @@ namespace MyBookingApp.Controllers
                 return View("Login"); 
             }
 
+        public IActionResult LogOut()
+        {
+            HttpContext.Session.SetString("UserName", "");
+
+            return RedirectToAction("Index");
+        }
         public IActionResult SignUp()
         {
             return View();
         }
-
         public async Task<IActionResult> AddAccount(SignUpDTO model)
         {
             if (!ModelState.IsValid)
             {
                 return View("SignUp",model);
             }
-            LoginDTO dTO= new LoginDTO { Email = model.Email, Password = model.Password };
+            LoginDTO dTO= new LoginDTO { Email = model.Email, Password = model.Password, Username=model.UserName };
             Guid id = await _LogService.AddAccount(dTO);
-            if (id!=Guid.Empty &&  _LogService.AddAccount(dTO)!=null)
-                return View("Index");
-            else return View();
+            ClientDTO clientDTO = model.ToClientDTO(model);
+            
+            _ClientService.AddClient(clientDTO);
+            if ( id!=Guid.Empty && _LogService.AddAccount(dTO)!=null )
+            {
+                HttpContext.Session.SetString("UserName", model.UserName); // ✅ Save email in session
+
+                //ViewBag.ClientName= model.UserName;
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Invalid login attempt");
+            return View(model);
         }
 
     }

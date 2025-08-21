@@ -1,8 +1,5 @@
 ﻿
     using System.Globalization;
-
-using System.Globalization;
-
 public static class CountryHelper
 {
     public static List<string> GetAllCountries(string culture = "en")

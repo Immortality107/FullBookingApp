@@ -37,7 +37,7 @@ namespace MyBookingApp.Controllers
             _PayService = payservice;
             _paymobService = paymobService;
             _LogService= _login;
-             _AllServices = _serviceService.GetServices().Result;
+             _AllServices =  _serviceService.GetServices().Result;
             _ClientService = clientService;
             _Settings= options.Value;
         }
@@ -46,16 +46,17 @@ namespace MyBookingApp.Controllers
 
         public async Task<IActionResult> Index()
         {
-
             List<ReviewResponse> AllReviews = await _ReviewService.GetReviews();
             ViewBag.ClientName= "";
             return View(AllReviews);
         }
+
         [Route("/About")]
         public IActionResult About()
         {
             return View();
         }
+
         [Route("/Contact")]
         public IActionResult Contact()
         {
@@ -67,24 +68,22 @@ namespace MyBookingApp.Controllers
         {
             return View(_AllServices);
         }
+
         [Route("/Payments")]
         public IActionResult Payments()
         {
             return View();
         }
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+
         [Route("Home/LocalChooseSession")]
         public IActionResult LocalChooseSession()
         {
             //ViewBag.PrivateSessionPrice="1700EGP";
             //ViewBag.OnlineMonthlyPackagePrice="5200EGP";
             //ViewBag.OfflineMonthlyPackagePrice="6200EGP";
-
             return View("EgyptianSessionTypeView", _AllServices);
         }
+
         [Route("Home/InternationalChooseSession")]
         public IActionResult InternationalChooseSession()
         {
@@ -96,9 +95,9 @@ namespace MyBookingApp.Controllers
         [Route("Home/LocalSupportCircle")]
         public  IActionResult LocalSupportCircle()
         {
-
             return View("EgyptianCirclesTypeView", _AllServices);
         }
+
         [Route("Home/InternationalSupportCircle")]
         public  IActionResult InternationalSupportCircle()
         {
@@ -112,7 +111,6 @@ namespace MyBookingApp.Controllers
             string PriceWithoutCurrency = await _PayService.ExtractPriceAsync(price);
             Service service = _AllServices.FirstOrDefault(s => s.ServiceId == id);
             switch (service.ServiceName) {
-
             case  "دايرة الرفض":
                     ServiceName = "RejectionCircle";
                     break;
@@ -137,27 +135,20 @@ namespace MyBookingApp.Controllers
                  default:
                     ServiceName = "EgyptianSessionTypeView";
                     break;
-
             }
              ViewBag.Price = PriceWithoutCurrency;
             ViewBag.ServiceName = ServiceName;
             return View(ServiceName);
         }
-        //[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        //public IActionResult Error()
-        //{
-        //    return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        //}
-        [Route("~/SupportCircle/ChoosePayment")]
+ 
 
+        [Route("~/SupportCircle/ChoosePayment")]
         public IActionResult ChoosePayment(string Price,string ServiceName)
         {
             //List<PaymentDTO> payments = new List<PaymentDTO>();
             ViewBag.Price=Price;
             ViewBag.ServiceName = ServiceName;
-
             return View();
-
         }
 
         [Route("~/SupportCircle/PayPage")]
@@ -196,11 +187,10 @@ namespace MyBookingApp.Controllers
                     end = DateTime.Today.AddDays(1).AddHours(15).ToString("yyyy-MM-ddTHH:mm:ss")
                 }
             };
-
             return Json(events);
         }
 
-            [HttpGet("~/Booked/BookAppointment")]
+        [HttpGet("~/Booked/BookAppointment")]
         public IActionResult BookAppointment()
         {        
             return View();
@@ -210,8 +200,9 @@ namespace MyBookingApp.Controllers
         {
             return View();
         }
-        [HttpPost("~/Home/Login")]
 
+
+        [HttpPost("~/Home/Login")]
         public async Task<IActionResult> Register(string Email, string Password)
         {
             List<LoginDTO> AlllogingAccounts = await _LogService.GetAllRegisteredAccounts();
@@ -226,27 +217,25 @@ namespace MyBookingApp.Controllers
 
                         ViewBag.ClientName= L.Username;
                         return RedirectToAction("Index");
-                    } }
-                else if (L.Email==Email && L.Password != Password)
-                {
-                    ModelState.AddModelError("Password", "Password Is Invalid!");
-                    var currentCulture = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
-
-                    ViewBag.Countries = CountryHelper.GetAllCountries(currentCulture);
-                    return View("Login");
-
-                }
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("Password", "Password Is Invalid!");
+                        var currentCulture = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
+                        ViewBag.Countries = CountryHelper.GetAllCountries(currentCulture);
+                        return View("Login");
+                    }
+                } 
             }
-                ModelState.AddModelError("Email", "Email is not available, please sign up!");
+            ModelState.AddModelError("Email", "Email is not available, please sign up!");
             var CurrentCulture = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
-
-            ViewBag.Countries = CountryHelper.GetAllCountries(CurrentCulture); return View("Login"); 
+            ViewBag.Countries = CountryHelper.GetAllCountries(CurrentCulture);
+            return View("Login"); 
             }
 
         public IActionResult LogOut()
         {
             HttpContext.Session.SetString("UserName", "");
-
             return RedirectToAction("Index");
         }
         public IActionResult SignUp()
@@ -262,17 +251,13 @@ namespace MyBookingApp.Controllers
             }
             LoginDTO dTO= new LoginDTO { Email = model.Email, Password = model.Password, Username=model.UserName };
             Guid id = await _LogService.AddAccount(dTO);
-            ClientDTO clientDTO = model.ToClientDTO(model);
-            
+            ClientDTO clientDTO = model.ToClientDTO(model);   
             _ClientService.AddClient(clientDTO);
             if ( id!=Guid.Empty && _LogService.AddAccount(dTO)!=null )
             {
-                HttpContext.Session.SetString("UserName", model.UserName); // ✅ Save email in session
-
-                //ViewBag.ClientName= model.UserName;
+                HttpContext.Session.SetString("UserName", model.UserName);
                 return RedirectToAction("Index");
             }
-
             ModelState.AddModelError("", "Invalid login attempt");
             return View(model);
         }

@@ -230,12 +230,17 @@ namespace MyBookingApp.Controllers
                 else if (L.Email==Email && L.Password != Password)
                 {
                     ModelState.AddModelError("Password", "Password Is Invalid!");
+                    var currentCulture = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
+
+                    ViewBag.Countries = CountryHelper.GetAllCountries(currentCulture);
                     return View("Login");
 
                 }
             }
                 ModelState.AddModelError("Email", "Email is not available, please sign up!");
-                return View("Login"); 
+            var CurrentCulture = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
+
+            ViewBag.Countries = CountryHelper.GetAllCountries(CurrentCulture); return View("Login"); 
             }
 
         public IActionResult LogOut()
@@ -246,7 +251,8 @@ namespace MyBookingApp.Controllers
         }
         public IActionResult SignUp()
         {
-            return View();
+            var currentCulture = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
+            ViewBag.Countries = CountryHelper.GetAllCountries(currentCulture); return View();
         }
         public async Task<IActionResult> AddAccount(SignUpDTO model)
         {

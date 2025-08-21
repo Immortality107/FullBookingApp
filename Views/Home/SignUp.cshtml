@@ -26,17 +26,25 @@
                 <span asp-validation-for="Phone" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label for="Country">Country</label>
-                <input type="text" asp-for="Country" id="Country" name="Country" required />
+                <label for="Country">البلد</label>
+                <select asp-for="Country" class="form-control" required>
+                    <option value="">-- اختر البلد --</option>
+                    @foreach (var country in ViewBag.Countries as List<string>)
+                    {
+                        <option value="@country">@country</option>
+                    }
+                </select>
                 <span asp-validation-for="Country" class="text-danger"></span>
             </div>
+
+
             <div class="form-group">
                 <label for="Age">Age</label>
                 <input type="number" asp-for="Age" id="Age" name="Age" required />
                 <span asp-validation-for="Age" class="text-danger"></span>
             </div>
 
-            <div class="form-group">
+         @*    <div >
                 <label>Gender</label>
                 <div>
                     <input type="radio" asp-for="Gender" value="Male" id="GenderMale" />
@@ -45,23 +53,23 @@
                 <div>
                     <input type="radio" asp-for="Gender" value="Female" id="GenderFemale" />
                     <label for="GenderFemale">Female</label>
+              </div>
+              <span asp-validation-for="Gender" class="text-danger"></span>
+            </div> *@
+
+            <div class="form-group">
+                <label class="d-block">Gender</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" asp-for="Gender" value="Male" id="GenderMale" />
+                    <label class="form-check-label" for="GenderMale">Male</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" asp-for="Gender" value="Female" id="GenderFemale" />
+                    <label class="form-check-label" for="GenderFemale">Female</label>
                 </div>
                 <span asp-validation-for="Gender" class="text-danger"></span>
             </div>
 
-     @*        <div class="form-group">
-                <label>Gender</label>
-                <span>
-                <input type="radio" value="Female"  asp-for="Gender" id="GenderFemale" name="GenderFemale" required />
-               <span for="GenderFemale">Female</span>
-            </span>
-            <span>
-                <input type="radio" value="Male" asp-for="Gender" id="GenderMale" name="GenderMale" required />
-                <span for="GenderMale">Male</span>
-                <span asp-validation-for="Gender" class="text-danger"></span>
-
-                </span>
-            </div> *@
             <div class="form-group">
                 <label for="Password">Password</label>
                 <input type="password" asp-for="Password" id="Password" name="Password" required />
@@ -75,7 +83,6 @@
                     @ViewData["PasswordError"]
                 </span>
             </div>
-
             <button type="submit" class="login-btn">Sign Up</button>
             <p class="signup-text">
                 Already have an account?
@@ -92,7 +99,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        min-height: 100vh;
+        padding-top: 60px; 
     }
 
     .login-container {
@@ -179,7 +187,13 @@
                 text-decoration: underline;
             }
 </style>
-
+<script>
+    function goToPage() {
+           const selectedLocation = document.getElementById('countrySelect').value;
+    }
+    </script>
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
+@*     <partial name ="_PartialViewChooseLocation"/>
+ *@        
 }
